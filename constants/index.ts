@@ -1,26 +1,26 @@
 export const sidebarLinks = [
     {
-        label: 'Home',
+        label: 'Trang chủ',
         route: '/',
         imgUrl: '/icons/Home.svg',
     },
     {
-        label: 'Upcoming',
+        label: 'Sắp diễn ra',
         route: '/upcoming',
         imgUrl: '/icons/upcoming.svg',
     },
     {
-        label: 'Previous',
+        label: 'Cuộc họp trước',
         route: '/previous',
         imgUrl: '/icons/previous.svg',
     },
     {
-        label: 'Recordings',
+        label: 'Bản ghi',
         route: '/recordings',
         imgUrl: '/icons/Video.svg',
     },
     {
-        label: 'Personal Room',
+        label: 'Phòng cá nhân',
         route: '/personal-room',
         imgUrl: '/icons/add-personal.svg',
     },

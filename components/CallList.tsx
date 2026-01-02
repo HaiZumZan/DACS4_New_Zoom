@@ -30,11 +30,11 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
   const getNoCallsMessage = () => {
     switch (type) {
       case 'ended':
-        return 'No Previous Calls';
+        return 'Không có cuộc họp nào trước đó';
       case 'upcoming':
-        return 'No Upcoming Calls';
+        return 'Không có cuộc họp nào được lên lịch';
       case 'recordings':
-        return 'No Recordings';
+        return 'Không có bản ghi cuộc gọi';
       default:
         return '';
     }
@@ -80,7 +80,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
             title={
               (meeting as Call).state?.custom?.description ||
               (meeting as CallRecording).filename?.substring(0, 20) ||
-              'No Description'
+              'Không có tiêu đề'
             }
             date={
               (meeting as Call).state?.startsAt?.toLocaleString() ||
@@ -93,7 +93,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
                 : `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${(meeting as Call).id}`
             }
             buttonIcon1={type === 'recordings' ? '/icons/play.svg' : undefined}
-            buttonText={type === 'recordings' ? 'Play' : 'Start'}
+            buttonText={type === 'recordings' ? 'Phát' : 'Bắt đầu'}
             handleClick={
               type === 'recordings'
                 ? () => router.push(`${(meeting as CallRecording).url}`)

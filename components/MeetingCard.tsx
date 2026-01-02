@@ -70,7 +70,7 @@ const MeetingCard = ({
               onClick={() => {
                 navigator.clipboard.writeText(link);
                 toast({
-                  title: "Link Copied",
+                  title: "Đã sao chép liên kết",
                 });
               }}
               className="bg-dark-4 px-6"
@@ -81,7 +81,7 @@ const MeetingCard = ({
                 width={20}
                 height={20}
               />
-              &nbsp; Copy Link
+              &nbsp; Copy link
             </Button>
           </div>
         )}
